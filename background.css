@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: transparent;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.45), rgba(24, 156, 44, 0.45),rgba(60, 99, 218, 0.45));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tinted-image {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    background: 
+      /* top, transparent red */ 
+      linear-gradient(
+        rgba(255, 0, 0, 0.45), 
+        rgba(255, 0, 0, 0.45)
+      ),
+      /* bottom, image */
+      url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/owl1.jpg);
+  }
+
+  .tinted-image > p {
+    padding-bottom: 0.5rem;
+  }
+
+  article + article {
+    margin-top: 1rem;
+  }
+
+  .tree {
+      /* bottom, image */
+      background: 
+      /* top, transparent red */ 
+      linear-gradient(
+        rgba(24, 156, 44, 0.45), 
+        rgba(24, 156, 44, 0.45)
+      ),
+      /* bottom, image */
+      url(assets/oak-tree-2018822_640.jpg);
+  }
+
+  .sea {
+    /* bottom, image */
+    background: 
+    /* top, transparent red */ 
+    linear-gradient(
+      rgba(60, 99, 218, 0.45), 
+      rgba(60, 99, 218, 0.45)
+    ),
+    /* bottom, image */
+    url(assets/nature-2384_640.jpg);
+}
