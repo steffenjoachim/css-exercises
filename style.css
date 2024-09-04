@@ -13,14 +13,13 @@ body {
 
 main {
     display: flex;
-    padding: 48px 0;
 }
 
 nav {
     padding-left: 12px;
     padding-right: 12px;
     padding-top: 48px;
-    /* width: 15vw; */
+    width: 15vw;
     list-style: none;
     text-decoration: none;
     position: fixed; /* Navigation bleibt fixiert */
@@ -34,17 +33,63 @@ a {
     text-decoration: none;
 }
 
+.nav-list li > a:hover {
+    color: red;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
 li + li {
     padding-top: 16px;
 }
 
 article {
     flex: 1;
+    position: relative;
     /* padding-left: 150px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+form {
+    position: absolute;
+    top: 8px;
+    left: 160px;
+}
+
+body:has(#toggle:checked) {
+    background-color: black;
+    color: white;
+}
+
+body:has(#toggle:checked) .light {
+    display: none;
+}
+
+body:has(#toggle:checked) .dark {
+    display: block;
+}
+
+.dark {
+    display: none;
+}
+
+#toggle {
+    display: none;
+}
+
+body:has(article > form > input:checked) nav {
+    background-color: black;
+    color: white;
+}
+
+body:has(article > form > input:checked) nav a {
+    color: lightgray;
 }
 
 p {
@@ -54,6 +99,7 @@ p {
 h1 {
     font-size: 36px;
     margin-bottom: 36px;
+    margin-top: 48px;
 }
 
 section + section {
