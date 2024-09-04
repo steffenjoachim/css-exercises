@@ -15,6 +15,10 @@ main {
     display: flex;
 }
 
+.nav-container {
+    width: 15vw;
+}
+
 nav {
     padding-left: 12px;
     padding-right: 12px;
@@ -49,7 +53,6 @@ li + li {
 article {
     flex: 1;
     position: relative;
-    /* padding-left: 150px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
